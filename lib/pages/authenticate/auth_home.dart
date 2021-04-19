@@ -34,10 +34,10 @@ class AuthHome extends StatelessWidget {
                     ),
                     Container(
                       child: Text(
-                        'Banking App',
+                        'Central Banking App',
                         style: TextStyle(
                             color: Colors.white,
-                            fontSize: 35,
+                            fontSize: 32,
                             fontWeight: FontWeight.bold),
                       ),
                     ),
@@ -76,6 +76,42 @@ class AuthHome extends StatelessWidget {
                             textStyle:
                                 TextStyle(letterSpacing: 3, fontSize: 16)),
                       ),
+                    ),
+                    SizedBox(height: 20),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Container(
+                          child: Column(
+                            children: [
+                              Icon(
+                                Icons.phone,
+                                color: Colors.white,
+                                size: 30,
+                              ),
+                              Text(
+                                'Contact',
+                                style: TextStyle(color: Colors.white),
+                              )
+                            ],
+                          ),
+                        ),
+                        Container(
+                          child: Column(
+                            children: [
+                              Icon(
+                                Icons.,
+                                color: Colors.white,
+                                size: 30,
+                              ),
+                              Text(
+                                'Contact',
+                                style: TextStyle(color: Colors.white),
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
