@@ -2,6 +2,9 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+import 'sign_in.dart';
+import 'sign_up.dart';
+
 class AuthHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -49,7 +52,10 @@ class AuthHome extends StatelessWidget {
                           EdgeInsets.symmetric(vertical: 10, horizontal: 30),
                       child: ElevatedButton(
                         child: Text('LOGIN'),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(builder: (_) => SignIn()));
+                        },
                         style: ElevatedButton.styleFrom(
                             padding: EdgeInsets.symmetric(
                                 vertical: 15, horizontal: 70),
@@ -64,7 +70,10 @@ class AuthHome extends StatelessWidget {
                     SizedBox(height: 20),
                     Container(
                       child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(builder: (_) => SignUp()));
+                        },
                         child: Text('REGISTER'),
                         style: TextButton.styleFrom(
                             padding: EdgeInsets.symmetric(
@@ -79,7 +88,7 @@ class AuthHome extends StatelessWidget {
                     ),
                     SizedBox(height: 20),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
                           child: Column(
@@ -87,26 +96,50 @@ class AuthHome extends StatelessWidget {
                               Icon(
                                 Icons.phone,
                                 color: Colors.white,
-                                size: 30,
+                                size: 40,
                               ),
                               Text(
                                 'Contact',
-                                style: TextStyle(color: Colors.white),
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 17),
                               )
                             ],
                           ),
+                        ),
+                        SizedBox(
+                          width: 30,
                         ),
                         Container(
                           child: Column(
                             children: [
                               Icon(
-                                Icons.,
+                                Icons.my_location,
                                 color: Colors.white,
-                                size: 30,
+                                size: 40,
                               ),
                               Text(
-                                'Contact',
-                                style: TextStyle(color: Colors.white),
+                                'Locators',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 17),
+                              )
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          width: 30,
+                        ),
+                        Container(
+                          child: Column(
+                            children: [
+                              Icon(
+                                Icons.help,
+                                color: Colors.white,
+                                size: 40,
+                              ),
+                              Text(
+                                'FAQs',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 17),
                               )
                             ],
                           ),
