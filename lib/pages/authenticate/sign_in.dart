@@ -124,6 +124,8 @@ class _SignInState extends State<SignIn> {
             labelStyle: TextStyle(
               color: Colors.white,
             ),
+            enabledBorder:
+                OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
             hintText: 'example@email.com',
             hintStyle: TextStyle(color: Colors.white),
             prefixIcon: Icon(
@@ -152,6 +154,8 @@ class _SignInState extends State<SignIn> {
           labelStyle: TextStyle(
             color: Colors.white,
           ),
+          enabledBorder:
+              OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
           prefixIcon: Icon(
             Icons.lock,
             color: Colors.white,
@@ -160,8 +164,14 @@ class _SignInState extends State<SignIn> {
           //errorStyle: TextStyle(fontSize: 17),
           suffixIcon: IconButton(
             icon: isPasswordVisible
-                ? Icon(Icons.visibility)
-                : Icon(Icons.visibility_off),
+                ? Icon(
+                    Icons.visibility,
+                    color: Colors.white,
+                  )
+                : Icon(
+                    Icons.visibility_off,
+                    color: Colors.white,
+                  ),
             onPressed: () =>
                 setState(() => isPasswordVisible = !isPasswordVisible),
           ),
@@ -176,14 +186,17 @@ class _SignInState extends State<SignIn> {
             this.value = !value;
           });
         },
-        leading: Checkbox(
-          value: value,
-          onChanged: (value) {
-            setState(() {
-              this.value = value;
-            });
-          },
-          checkColor: Colors.white,
+        leading: Theme(
+          data: ThemeData(unselectedWidgetColor: Colors.grey),
+          child: Checkbox(
+            value: value,
+            onChanged: (value) {
+              setState(() {
+                this.value = value;
+              });
+            },
+            checkColor: Colors.white,
+          ),
         ),
         title: Text(
           'Remember me next time',
