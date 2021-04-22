@@ -1,4 +1,5 @@
 import 'package:banking_app/pages/authenticate/auth_home.dart';
+import 'package:banking_app/pages/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:keyboard_dismisser/keyboard_dismisser.dart';
@@ -205,7 +206,10 @@ class _SignInState extends State<SignIn> {
       );
 
   Widget buildLoginBtn() => ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context)
+              .pushReplacement(MaterialPageRoute(builder: (_) => Home()));
+        },
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 17, horizontal: 0),
           child: Text(
