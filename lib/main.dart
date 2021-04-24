@@ -9,9 +9,6 @@ void main() {
     routes: {
       '/': (context) => Loading(),
       '/auth_home': (context) => AuthHome(),
-      '/home': (context) => Home()
     },
   ));
 }
-
-
