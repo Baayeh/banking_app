@@ -23,6 +23,7 @@ class _BottomTabBarState extends State<BottomTabBar> {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      elevation: 10,
       selectedItemColor: Colors.blue[900],
       items: [
         BottomNavigationBarItem(

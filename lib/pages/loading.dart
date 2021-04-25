@@ -17,7 +17,7 @@ class _LoadingState extends State<Loading> {
 
     Timer(Duration(seconds: 3), () {
       Navigator.of(context)
-          .pushReplacement(MaterialPageRoute(builder: (_) => Home()));
+          .pushReplacement(MaterialPageRoute(builder: (_) => AuthHome()));
     });
   }
 
