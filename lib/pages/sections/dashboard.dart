@@ -17,7 +17,7 @@ class Dashboard extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              buildSecondCard()
+              buildSecondCard(),
             ],
           ),
         ),
@@ -172,7 +172,7 @@ class Dashboard extends StatelessWidget {
         elevation: 4,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         child: Container(
-          padding: EdgeInsets.all(20),
+          padding: EdgeInsets.all(15),
           height: 220,
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -187,28 +187,41 @@ class Dashboard extends StatelessWidget {
                 children: [
                   Column(
                     children: [
-                      GestureDetector(
-                        onTap: () {
-                          print('object');
-                        },
-                        child: Icon(
-                          Icons.receipt_long,
-                          color: Colors.blue[900],
-                          size: 50,
+                      ElevatedButton(
+                        onPressed: () {},
+                        child: Padding(
+                          padding: const EdgeInsets.all(10),
+                          child: Icon(
+                            Icons.transfer_within_a_station,
+                            color: Colors.white,
+                            size: 35,
+                          ),
                         ),
+                        style: ElevatedButton.styleFrom(
+                            shape: CircleBorder(), primary: Colors.blue[900]),
                       ),
-                      Text(
-                        'Transfers',
-                        style: TextStyle(color: Colors.blue[900]),
+                      Container(
+                        child: Text(
+                          'Transfers',
+                          style: TextStyle(color: Colors.blue[900]),
+                        ),
                       )
                     ],
                   ),
                   Column(
                     children: [
-                      Icon(
-                        Icons.payments,
-                        color: Colors.blue[900],
-                        size: 50,
+                      ElevatedButton(
+                        onPressed: () {},
+                        child: Padding(
+                          padding: const EdgeInsets.all(10),
+                          child: Icon(
+                            Icons.account_balance,
+                            color: Colors.white,
+                            size: 35,
+                          ),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                            shape: CircleBorder(), primary: Colors.blue[900]),
                       ),
                       Container(
                         child: Text(
@@ -220,10 +233,18 @@ class Dashboard extends StatelessWidget {
                   ),
                   Column(
                     children: [
-                      Icon(
-                        Icons.ac_unit,
-                        color: Colors.blue[900],
-                        size: 50,
+                      ElevatedButton(
+                        onPressed: () {},
+                        child: Padding(
+                          padding: const EdgeInsets.all(10),
+                          child: Icon(
+                            Icons.settings,
+                            color: Colors.white,
+                            size: 35,
+                          ),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                            shape: CircleBorder(), primary: Colors.blue[900]),
                       ),
                       Container(
                         child: Text(
@@ -232,7 +253,7 @@ class Dashboard extends StatelessWidget {
                         ),
                       )
                     ],
-                  )
+                  ),
                 ],
               ),
               SizedBox(
@@ -243,10 +264,18 @@ class Dashboard extends StatelessWidget {
                 children: [
                   Column(
                     children: [
-                      Icon(
-                        Icons.card_membership,
-                        color: Colors.blue[900],
-                        size: 50,
+                      ElevatedButton(
+                        onPressed: () {},
+                        child: Padding(
+                          padding: const EdgeInsets.all(10),
+                          child: Icon(
+                            Icons.credit_card,
+                            color: Colors.white,
+                            size: 35,
+                          ),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                            shape: CircleBorder(), primary: Colors.blue[900]),
                       ),
                       Container(
                         child: Text(
@@ -258,10 +287,18 @@ class Dashboard extends StatelessWidget {
                   ),
                   Column(
                     children: [
-                      Icon(
-                        Icons.credit_card,
-                        color: Colors.blue[900],
-                        size: 50,
+                      ElevatedButton(
+                        onPressed: () {},
+                        child: Padding(
+                          padding: const EdgeInsets.all(10),
+                          child: Icon(
+                            Icons.shopping_cart,
+                            color: Colors.white,
+                            size: 35,
+                          ),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                            shape: CircleBorder(), primary: Colors.blue[900]),
                       ),
                       Container(
                         child: Text(
@@ -273,10 +310,18 @@ class Dashboard extends StatelessWidget {
                   ),
                   Column(
                     children: [
-                      Icon(
-                        Icons.call_split,
-                        color: Colors.blue[900],
-                        size: 50,
+                      ElevatedButton(
+                        onPressed: () {},
+                        child: Padding(
+                          padding: const EdgeInsets.all(10),
+                          child: Icon(
+                            Icons.crop_free,
+                            color: Colors.white,
+                            size: 35,
+                          ),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                            shape: CircleBorder(), primary: Colors.blue[900]),
                       ),
                       Container(
                         child: Text(
@@ -285,7 +330,7 @@ class Dashboard extends StatelessWidget {
                         ),
                       )
                     ],
-                  )
+                  ),
                 ],
               ),
             ],
