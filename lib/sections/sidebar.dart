@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class NavBar extends StatelessWidget {
+class SideBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -38,6 +38,7 @@ class NavBar extends StatelessWidget {
                 style: TextStyle(fontSize: 17, color: Colors.blue[900]),
               ),
               onTap: () {},
+              hoverColor: Colors.amber,
             ),
           ),
           Container(
