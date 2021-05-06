@@ -1,7 +1,9 @@
 import 'dart:async';
 
+import 'package:banking_app/screens/account.dart';
 import 'package:banking_app/screens/authenticate/auth_home.dart';
 import 'package:banking_app/screens/home.dart';
+import 'package:banking_app/screens/services.dart';
 import 'package:flutter/material.dart';
 
 class Loading extends StatefulWidget {
@@ -17,7 +19,7 @@ class _LoadingState extends State<Loading> {
 
     Timer(Duration(seconds: 3), () {
       Navigator.of(context)
-          .pushReplacement(MaterialPageRoute(builder: (_) => Home()));
+          .pushReplacement(MaterialPageRoute(builder: (_) => Services()));
     });
   }
 

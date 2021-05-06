@@ -1,4 +1,4 @@
-import 'package:banking_app/pages/authenticate/auth_home.dart';
+import 'package:banking_app/screens/authenticate/auth_home.dart';
 import 'package:flutter/material.dart';
 import 'package:keyboard_dismisser/keyboard_dismisser.dart';
 

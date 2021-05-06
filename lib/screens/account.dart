@@ -1,15 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:banking_app/sections/sidebar.dart';
 
-class History extends StatelessWidget {
+import 'home.dart';
+
+class Account extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.grey[300],
-        drawer: SideBar(),
         appBar: AppBar(
           backgroundColor: Colors.blue[900],
-          title: Text('My History'),
+          leading: IconButton(
+            onPressed: () {
+              Navigator.of(context)
+                  .pushReplacement(MaterialPageRoute(builder: (_) => Home()));
+            },
+            icon: Icon(Icons.arrow_back),
+          ),
+          title: Text('My Money'),
         ),
         body: Padding(
           padding: const EdgeInsets.all(12),
@@ -22,7 +29,7 @@ class History extends StatelessWidget {
                   children: [
                     ListTile(
                         leading: Icon(Icons.ac_unit),
-                        title: Text('Paid Invoices'),
+                        title: Text('Crentral Account(s)'),
                         trailing: Container(
                           padding:
                               EdgeInsets.symmetric(vertical: 3, horizontal: 7),
@@ -41,7 +48,7 @@ class History extends StatelessWidget {
                     ),
                     ListTile(
                         leading: Icon(Icons.ac_unit),
-                        title: Text('Unpaid Invoices'),
+                        title: Text('My Cards'),
                         trailing: Container(
                           padding:
                               EdgeInsets.symmetric(vertical: 3, horizontal: 7),
@@ -60,7 +67,7 @@ class History extends StatelessWidget {
                     ),
                     ListTile(
                         leading: Icon(Icons.ac_unit),
-                        title: Text('Visa Payments'),
+                        title: Text('MTN Mobile Money'),
                         trailing: Container(
                           padding:
                               EdgeInsets.symmetric(vertical: 3, horizontal: 7),
@@ -68,7 +75,7 @@ class History extends StatelessWidget {
                               color: Colors.blue[900],
                               borderRadius: BorderRadius.circular(6)),
                           child: Text(
-                            '0',
+                            '1',
                             style: TextStyle(color: Colors.white),
                           ),
                         )),
@@ -79,7 +86,7 @@ class History extends StatelessWidget {
                     ),
                     ListTile(
                         leading: Icon(Icons.ac_unit),
-                        title: Text('Funds Transfers'),
+                        title: Text('Central Wallet'),
                         trailing: Container(
                           padding:
                               EdgeInsets.symmetric(vertical: 3, horizontal: 7),
@@ -87,7 +94,7 @@ class History extends StatelessWidget {
                               color: Colors.blue[900],
                               borderRadius: BorderRadius.circular(6)),
                           child: Text(
-                            '63',
+                            '1',
                             style: TextStyle(color: Colors.white),
                           ),
                         )),
@@ -97,36 +104,8 @@ class History extends StatelessWidget {
                       indent: 70,
                     ),
                     ListTile(
-                        leading: Icon(Icons.ac_unit),
-                        title: Text('Tokens'),
-                        trailing: Container(
-                          padding:
-                              EdgeInsets.symmetric(vertical: 3, horizontal: 7),
-                          decoration: BoxDecoration(
-                              color: Colors.blue[900],
-                              borderRadius: BorderRadius.circular(6)),
-                          child: Text(
-                            '0',
-                            style: TextStyle(color: Colors.white),
-                          ),
-                        )),
-                    Divider(
-                      height: 10,
-                      color: Colors.blue[900],
-                      indent: 70,
-                    ),
-                    ListTile(
                       leading: Icon(Icons.ac_unit),
-                      title: Text('Split Bills'),
-                    ),
-                    Divider(
-                      height: 10,
-                      color: Colors.blue[900],
-                      indent: 70,
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.ac_unit),
-                      title: Text('Shell Card TopUps'),
+                      title: Text('Download Bank Statement'),
                     )
                   ],
                 ),
